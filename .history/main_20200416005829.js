@@ -54,7 +54,7 @@ const Student = (studentName, course, term = 1) => {
         this.courses.push(Course(nameOfCourse));
       },
 
-      getAverage: function (course, term) {
+      getAverage: function (course, term = this.term - 1) {
         let coursesLevel1Array = this.courses;
         for(let i = 0; i < coursesLevel1Array.length; i++) {
           let objInArray = coursesLevel1Array[i];
