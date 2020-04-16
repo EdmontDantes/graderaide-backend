@@ -77,7 +77,7 @@ const Student = (studentName, course, term = 1) => {
         //   }
         //   return totalSumOfArray /  intermediateArray.length;
         // }
-    };
+    },
   };
 
 // const student1 = Student('Edmont', 'SomeCourse')

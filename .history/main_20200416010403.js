@@ -54,20 +54,38 @@ const Student = (studentName, course, term = 1) => {
         this.courses.push(Course(nameOfCourse));
       },
 
-      getAverage: function (course = this.course, term = this.term - 1) {
+      getAverage: function (course, term) {
         let coursesLevel1Array = this.courses;
         for(let i = 0; i < coursesLevel1Array.length; i++) {
           let objInArray = coursesLevel1Array[i];
-          if(objInArray.name === course) {
-            
-            for(let array in objInArray.term) {
+          if
+
+          for(let object in objInArray) {
+            if(object.name === course) {
+              let objectsTermArray = object.term;
+              for(let t = 0; t < objectsTermArray.length; t++) {
                 
-                }
+              }
+            }
+          }
+
+
+          // let termsArray = objInarray.terms[term];
+
+
+          if(objInarray.name === course) {
+            for(let i = 0; i < Object.keys())
+            
+
+            }
+          }
+
           }
         }
-      },
+
         // let getNestedObjectinsidearray = this.courses.map(function() {
         //   this.courses.
+
         // });
         // if (course === this.courses. && term === this.courses.terms[term - 1]) {
         //   const intermediateArray = this.courses.name.terms[terms];
@@ -76,9 +94,11 @@ const Student = (studentName, course, term = 1) => {
         //     totalSumOfArray += intermediateArray[i];
         //   }
         //   return totalSumOfArray /  intermediateArray.length;
+
         // }
-    };
+    },
   };
+};
 
 // const student1 = Student('Edmont', 'SomeCourse')
 // console.log(student1)

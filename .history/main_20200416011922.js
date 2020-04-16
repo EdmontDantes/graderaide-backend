@@ -64,10 +64,15 @@ const Student = (studentName, course, term = 1) => {
                 
                 }
           }
+      }
+      }
+
+
         }
-      },
+
         // let getNestedObjectinsidearray = this.courses.map(function() {
         //   this.courses.
+
         // });
         // if (course === this.courses. && term === this.courses.terms[term - 1]) {
         //   const intermediateArray = this.courses.name.terms[terms];
@@ -76,9 +81,11 @@ const Student = (studentName, course, term = 1) => {
         //     totalSumOfArray += intermediateArray[i];
         //   }
         //   return totalSumOfArray /  intermediateArray.length;
+
         // }
-    };
+    },
   };
+};
 
 // const student1 = Student('Edmont', 'SomeCourse')
 // console.log(student1)
