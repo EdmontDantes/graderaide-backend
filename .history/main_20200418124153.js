@@ -70,7 +70,7 @@ const Student = (studentName, course, term = 1) => {
         // let sum = 0;
 
         for (const course of this.courses) {
-          if (course.name === courseToFind) {
+          if (course) {
             const term = course.terms[termToFind];
             let sum = 0;
 

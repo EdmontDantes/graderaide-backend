@@ -69,8 +69,8 @@ const Student = (studentName, course, term = 1) => {
         // return term.grades.reduce((sum, grade) => sum + grade.score, 0) / term.grades.length;
         // let sum = 0;
 
-        for (const course of this.courses) {
-          if (course.name === courseToFind) {
+          for (const course of this.courses) {
+          if (course) {
             const term = course.terms[termToFind];
             let sum = 0;
 

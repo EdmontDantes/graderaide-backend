@@ -63,14 +63,16 @@ const Student = (studentName, course, term = 1) => {
         this.courses.push(Course(course));
       },
 
-      getAverage: function (courseToFind = this.course, termToFind = this.term -1) {
-        // const course = this.courses.find((course) => course.name === courseToFind);
-        // const term = course.terms[termToFind];
-        // return term.grades.reduce((sum, grade) => sum + grade.score, 0) / term.grades.length;
-        // let sum = 0;
+      getAverage: function (courseToFind, termToFind) {
+          const helperFunction = function(course) {
+            return course.name === courseToFind;
+          }
+
+          
+          const course = this.courses.find();
 
         for (const course of this.courses) {
-          if (course.name === courseToFind) {
+          if (helperFunction(course)) {
             const term = course.terms[termToFind];
             let sum = 0;
 

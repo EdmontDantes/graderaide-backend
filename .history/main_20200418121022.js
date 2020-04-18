@@ -63,27 +63,44 @@ const Student = (studentName, course, term = 1) => {
         this.courses.push(Course(course));
       },
 
-      getAverage: function (courseToFind = this.course, termToFind = this.term -1) {
-        // const course = this.courses.find((course) => course.name === courseToFind);
-        // const term = course.terms[termToFind];
-        // return term.grades.reduce((sum, grade) => sum + grade.score, 0) / term.grades.length;
-        // let sum = 0;
-
+      getAverage: function (courseToFind, termToFind) {
+      
+        let sum = 0;
         for (const course of this.courses) {
-          if (course.name === courseToFind) {
+          if(course.name === courseToFind) {
             const term = course.terms[termToFind];
-            let sum = 0;
-
-            for (const grade of term.grades) {
+            for (const grade of course.terms[termToFind].grades) {
               sum += grade.score;
             }
-            return sum / term.grades.length;
           }
+          return sum / course.terms[termToFind].length;
         }
-    },
+
+
+
+        // let coursesLevel1Array = this.courses;
+        // for(let i = 0; i < coursesLevel1Array.length; i++) {
+        //   let objInArray = coursesLevel1Array[i];
+        //   if(objInArray.name === course) {
+            
+        //     for(let array in objInArray.term) {
+                
+        //         }
+        //   }
+        // }
+      },
+
+
     };
   };
 
+// const student1 = Student('Edmont', 'SomeCourse')
+// console.log(student1)
+// student1.addCourse(epicCourse)
+// console.log(student1)
+
+
+// Term.addGrade('EPIC ASSIGMENT', '100')
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *

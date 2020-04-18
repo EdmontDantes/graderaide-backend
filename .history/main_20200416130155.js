@@ -39,16 +39,7 @@ const Course = (nameOfACourse) => {
 };
 // const epicCourse = Course('WDI');
 // epicCourse.addTerm(300);
-// // console.log(epicCourse);
-// const getAverage = function(nums) {
-//   let sum = 0;
-
-//   for(const num of nums) {
-//     sum += num;
-//   }
-
-//   return sum / nums.length;
-// };
+// console.log(epicCourse);
 
 
 const Student = (studentName, course, term = 1) => {
@@ -58,32 +49,55 @@ const Student = (studentName, course, term = 1) => {
       term: term,
       courses: [],
 
-      addCourse: function (course) {
+      addCourse: function (nameOfCourse) {
         
-        this.courses.push(Course(course));
+        this.courses.push(Course(nameOfCourse));
       },
 
-      getAverage: function (courseToFind = this.course, termToFind = this.term -1) {
-        // const course = this.courses.find((course) => course.name === courseToFind);
-        // const term = course.terms[termToFind];
-        // return term.grades.reduce((sum, grade) => sum + grade.score, 0) / term.grades.length;
-        // let sum = 0;
-
-        for (const course of this.courses) {
-          if (course.name === courseToFind) {
-            const term = course.terms[termToFind];
-            let sum = 0;
-
-            for (const grade of term.grades) {
-              sum += grade.score;
-            }
-            return sum / term.grades.length;
+      getAverage: function (course = this.course, term = this.term - 1) {
+        let coursesLevel1Array = this.courses;
+        for(let i = 0; i < coursesLevel1Array.length; i++) {
+          let objInArray = coursesLevel1Array[i];
+          if(objInArray.name === course) {
+            
+            for(let array in objInArray.term) {
+                
+                }
           }
         }
-    },
+      },
+
+
+
+      
+//       1 string building
+// 2 looping
+// 3 filtering
+// 4 mapping
+// 5 copying objects so they aren't mutated
+// 6 using callbacks (taking functions as parameters)
+// 7 factory functions (functions that return objects
+        // let getNestedObjectinsidearray = this.courses.map(function() {
+        //   this.courses.
+        // });
+        // if (course === this.courses. && term === this.courses.terms[term - 1]) {
+        //   const intermediateArray = this.courses.name.terms[terms];
+        //   let totalSumOfArray = 0;
+        //   for (let i = 0; i < intermediateArray.length ;i++) {
+        //     totalSumOfArray += intermediateArray[i];
+        //   }
+        //   return totalSumOfArray /  intermediateArray.length;
+        // }
     };
   };
 
+// const student1 = Student('Edmont', 'SomeCourse')
+// console.log(student1)
+// student1.addCourse(epicCourse)
+// console.log(student1)
+
+
+// Term.addGrade('EPIC ASSIGMENT', '100')
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
